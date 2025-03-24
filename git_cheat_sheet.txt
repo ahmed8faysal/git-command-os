@@ -1,0 +1,53 @@
+Git Command Cheat Sheet (Windows & macOS)
+
+Setup:
+-------
+git config --global user.name "Your Name"  # Sets your name for commits
+git config --global user.email "[email address removed]" # Sets your email for commits
+git config --global init.defaultBranch main # Sets default branch to main
+
+Initialization & Cloning:
+--------------------------
+git init                                     # Initializes a new Git repository
+git clone <remote_repository_url>            # Clones a remote repository
+
+Basic Operations:
+-----------------
+git status                                   # Shows the status of the working directory
+git add .                                    # Adds all changes to the staging area
+git commit -m "Commit message"                # Commits staged changes with a message
+git log                                      # Shows commit history
+git log --oneline                            # Shows commit history in a compact format
+
+Branching & Merging:
+--------------------
+git branch                                   # Lists all local branches
+git branch <branch_name>                     # Creates a new branch
+git checkout <branch_name>                   # Switches to the specified branch
+git checkout -b <branch_name>                # Creates and switches to a new branch
+git checkout main                            # Switches back to the main branch
+git merge <branch_name>                      # Merges specified branch into current branch
+git branch -d <branch_name>                  # Deletes a local branch
+
+Remote Repositories:
+--------------------
+git remote add origin <remote_repository_url> # Adds a remote repository named "origin"
+git push -u origin main                      # Pushes local commits to the remote "main" branch
+git pull origin main                         # Pulls changes from the remote "main" branch
+
+Undoing Changes:
+----------------
+git reset HEAD <file>                        # Unstages a file
+git reset --hard <commit_hash>               # Resets to a specific commit (use with caution)
+git revert <commit_hash>                     # Creates a new commit that undoes the specified commit
+
+File Manipulation:
+------------------
+.gitignore                                  # File to specify ignored files/folders
+
+Notes:
+------
+- Replace placeholders like <branch_name>, <remote_repository_url>, and <commit_hash> with actual values.
+- Use `git --help` or `man git-<command>` for detailed information on a specific command.
+- The `-u` flag in `git push` sets the upstream branch, allowing you to use `git push` and `git pull` without specifying the remote and branch.
+- The period '.' in `git add .` means "add all files in the current directory and its subdirectories."
