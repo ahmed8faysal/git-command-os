@@ -1,0 +1,39 @@
+# Initialize a new Git repository in the current directory
+git init
+
+# Add all files in the current directory to the staging area
+git add .
+
+# Commit the staged changes with a message
+git commit -m "Initial commit"
+
+# Check the status of your working directory
+git status
+
+# View the commit history
+git log
+
+# Create a new branch named "feature-branch"
+git branch feature-branch
+
+# Switch to the "feature-branch" branch
+git checkout feature-branch
+
+# Switch back to the main branch
+git checkout main
+
+# Merge the "feature-branch" into the current branch (main)
+git merge feature-branch
+
+# Push the local repository to a remote repository (e.g., GitHub)
+git remote add origin <remote_repository_url>
+git push -u origin main
+
+# Pull changes from the remote repository
+git pull origin main
+
+#clone a remote repository
+git clone <remote_repository_url>
+
+#Delete a branch locally
+git branch -d feature-branch
